@@ -22,16 +22,16 @@ var converter = new CNBCurrencyConverter();
 decimal result = converter.Convert(CurrencyCode.USD, CurrencyCode.EUR, 100);
 Console.WriteLine($"100 USD = {result} EUR");
 ```
-How it works
-The application requests the daily exchange rate file from CNB (denni_kurz.txt).
+## How it works
+1. The application requests the daily exchange rate file from CNB (denni_kurz.txt).
 
-Data are parsed using CsvHelper and mapped to the CurrencyRecord model.
+2. Data are parsed using CsvHelper and mapped to the CurrencyRecord model.
 
-Exchange rates are stored in a dictionary for quick lookup.
+3. Exchange rates are stored in a dictionary for quick lookup.
 
-Conversion between currencies is performed using the stored exchange rates.
+4. Conversion between currencies is performed using the stored exchange rates.
 
-Installation & Run
+## Installation & Run
 Clone the repository and run with .NET:
 
 ```bash
@@ -39,11 +39,11 @@ git clone https://github.com/yourusername/CurrencyConverter.git
 cd CurrencyConverter
 dotnet run
 ```
-Future improvements
-Add command-line interface for user input
+## Future improvements
+- Add command-line interface for user input
 
-Unit testing
+- Unit testing
 
-Call exchange rate services that require an API key
+- Call exchange rate services that require an API key
 
-Work with JSON data instead of plain CSV
+- Work with JSON data instead of plain CSV
