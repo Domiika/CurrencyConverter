@@ -21,6 +21,7 @@ A simple console application in **C# (.NET)** that fetches daily exchange rates 
 var converter = new CNBCurrencyConverter();
 decimal result = converter.Convert(CurrencyCode.USD, CurrencyCode.EUR, 100);
 Console.WriteLine($"100 USD = {result} EUR");
+```
 How it works
 The application requests the daily exchange rate file from CNB (denni_kurz.txt).
 
@@ -33,15 +34,13 @@ Conversion between currencies is performed using the stored exchange rates.
 Installation & Run
 Clone the repository and run with .NET:
 
-bash
-Zkopírovat kód
+```bash
 git clone https://github.com/yourusername/CurrencyConverter.git
 cd CurrencyConverter
 dotnet run
+```
 Future improvements
 Add command-line interface for user input
-
-Support for historical exchange rates
 
 Unit testing
 
